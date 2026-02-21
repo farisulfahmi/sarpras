@@ -63,7 +63,7 @@ include 'koneksi.php';
                         <thead class="table-light">
                             <tr>
                                 <th>No</th>
-                                <th>Avatar</th>
+                                <th>Foto</th>
                                 <th>Nama Lengkap</th>
                                 <th>Username</th>
                                 <th>Role / Hak Akses</th>
