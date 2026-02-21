@@ -51,6 +51,7 @@ include 'koneksi.php';
                             <th>Nama User</th>
                             <th>Barang</th>
                             <th>Jenis</th>
+                            <th>Deskripsi User</th>
                             <th>Status</th>
                             <th class="text-center">Aksi & Feedback</th>
                         </tr>
@@ -77,6 +78,11 @@ include 'koneksi.php';
                             <td><strong><?= $row['nama_lengkap'] ?></strong></td>
                             <td><?= $row['nama_barang'] ?? '<span class="badge bg-secondary">Pengadaan Baru</span>' ?></td>
                             <td><span class="badge border text-dark bg-light"><?= ucfirst($row['jenis_pengajuan']) ?></span></td>
+                            <td>
+                                <small class="text-muted">
+                                    <?= nl2br(htmlspecialchars($row['deskripsi'])) ?>
+                                </small>
+                            </td>
                             <td><span class="badge badge-status <?= $status_class[$row['status']] ?>"><?= ucfirst($row['status']) ?></span></td>
                             <td class="text-center">
                                 <?php if($row['status'] == 'pending'): ?>
